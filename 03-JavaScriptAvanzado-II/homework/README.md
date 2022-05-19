@@ -1,14 +1,15 @@
-### Closures
+# Homework JavaScript Avanzado II
+
+## Closures
 
 Resolvé los ejercicios en el archivo `homework.js`.
 Para ejecutar los test, anda a esta carpeta y ejecutá:
 `npm install` y luego:
 `npm test`.
 
-
 ## Extra Credit
 
-## OOP - Prototypes
+### OOP - Prototypes
 
 ### Repeatify
 

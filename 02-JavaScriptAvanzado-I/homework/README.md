@@ -1,9 +1,7 @@
 
-# Ejercicios
+# Homework JavaScript Avanzado I
 
-## JavaScript
-
-### Scope & Hoisting
+## Scope & Hoisting
 
 Determiná que será impreso en la consola, sin ejecutar el código.
 

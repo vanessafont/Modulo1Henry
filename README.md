@@ -14,11 +14,11 @@
 
 - [Intro to Computer Science](./01-IntroToCS)
 - [Javascript Avanzado I](./02-JavaScriptAvanzado-I)
-- [Javascript Avanzado II](./02-JavaScriptAvanzado-II)
-- [Estructura de Datos I](./03-EstructuraDeDatos-I)
-- [Estructura de Datos II](./04-EstructuraDeDatos-II)
-- [Estructura de Datos III](./05-EstructuraDeDatos-III)
-- [Algoritmos I](./06-Algoritmos-I)
+- [Javascript Avanzado II](./03-JavaScriptAvanzado-II)
+- [Estructura de Datos I](./04-EstructuraDeDatos-I)
+- [Estructura de Datos II](./05-EstructuraDeDatos-II)
+- [Estructura de Datos III](./06-EstructuraDeDatos-III)
+- [Algoritmos I](./07-Algoritmos-I)
 - [Algoritmos II](./07-Algoritmos-II)
 
 </div >

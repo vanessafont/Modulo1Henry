@@ -25,7 +25,7 @@
 
 Básicamente, las listas enlazadas, son una secuencia de nodos enlazados entre ellos y que contienen información. Podemos decir que cada nodo contiene datos y además uno o más links a otros nodos. Según las restricciones que tengan la cantidad de links, estas pueden ser simplemente enlazadas, dobles o múltiples.
 
-![no-box](../_src/assets/03-EstructuraDeDatos-I/singlelist.png)
+![no-box](../_src/assets/04-EstructuraDeDatos-I/singlelist.png)
 
 ¿Donde podemos usar una lista enlazada? Por ejemplo, si tenemos que modelar el plan de vuelo de un avión una buena posibilidad sería una lista enlazada de aeropuertos. O en el browser para poder ir hacia atrás y adelante en las páginas web del historial también podríamos usar una lista doblemente enlazada, o también las podes usar para representar un mazo de cartas para jugar blackjack. :smile:
 
@@ -62,7 +62,7 @@ Veamos que operaciones podemos hacer en una lista:
   * En el medio de la lista.
   * Al final de la lista.
 
-![InsertarTop](../_src/assets/03-EstructuraDeDatos-I/listAdd.gif)
+![InsertarTop](../_src/assets/04-EstructuraDeDatos-I/listAdd.gif)
 
 _El orden en el que actualizan los punteros es muy importante. Si actualizan el la cabeza de la lista primero, pierden la lista!!_
 
@@ -70,9 +70,9 @@ _El orden en el que actualizan los punteros es muy importante. Si actualizan el 
   * Del principio de la lista.
   * Del medio de la lista.
 
-![ScarNodo](../_src/assets/03-EstructuraDeDatos-I/listaRemove.gif)
+![ScarNodo](../_src/assets/04-EstructuraDeDatos-I/listaRemove.gif)
 
-![Remove](../_src/assets/03-EstructuraDeDatos-I/listaRemove.png)
+![Remove](../_src/assets/04-EstructuraDeDatos-I/listaRemove.png)
 
 _Para sacar un item, directamente hacemos que no se pueda alcanzar desde el comienzo de la lista_
 
@@ -122,7 +122,7 @@ Genial! Como ejercicio van a tener que implementar las demás funcionalidades us
 En la lista que vimos antes, sólo podemos recorrer la lista en un solo sentido. En algunos casos nos puede servir recorrer la lista en los dos sentidos, para tales casos lo que vamos a usar es una lista doblemente enlazada.
 Como se puede imaginar, una lista doblemente enlazada es aquella que cada nodo tiene dos links, uno para el nodo siguiente, y otro para el nodo anterior.
 
-![no-box](../_src/assets/03-EstructuraDeDatos-I/doueblelist.png)
+![no-box](../_src/assets/04-EstructuraDeDatos-I/doueblelist.png)
 
 Ahora es fácil ir y venir entre los items. Ahora las operaciones tienen un paso más, que es hacer que los nuevos links apunten al nodo correcto.
 
@@ -130,7 +130,7 @@ Ahora es fácil ir y venir entre los items. Ahora las operaciones tienen un paso
 
 Esta estructura que guarda los datos de una manera asociativa, o sea con un par clave-valor o key-value. Los datos son guardados como en un arreglo, pero los índices tienen que ver con lo qué está guardado adentro. Esto hace que sean muy rápidas para buscar datos.
 
-![no-box](../_src/assets/03-EstructuraDeDatos-I/hashfunction.png)
+![no-box](../_src/assets/04-EstructuraDeDatos-I/hashfunction.png)
 
 De hecho, la función que transforman un elemento en una cadena de longitud finita (a esto se lo conoce como _hash_) se llama función _hash_. El término hash proviene, aparentemente, de la analogía con el significado estándar (en inglés) de dicha palabra en el mundo real: picar y mezclar. Donald Knuth cree que H. P. Luhn, empleado de IBM, fue el primero en utilizar el concepto en un memorándum fechado en enero de 1953. Su utilización masiva no fue hasta después de 10 años.
 
@@ -144,4 +144,4 @@ Para construir una hash table vamos a necesitar:
 
 ## Homework
 
-Completa la tarea descrita en el archivo [README](https://github.com/soyHenry/FT-M1/blob/master/04-EstructuraDeDatos-II/homework/README.md)
+Completa la tarea descrita en el archivo [README](https://github.com/soyHenry/FT-M1/blob/master/05-EstructuraDeDatos-II/homework/README.md)

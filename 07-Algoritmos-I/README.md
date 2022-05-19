@@ -214,11 +214,11 @@ Ahora... ¿Por qué nos importa medir la complejidad de los algoritmos? Básicam
 
 Vamos a usar una función que sirve de cota superior  de otra función cuando el argumento tiende a infinito.
 
-![asintotica](../_src/assets/06-Algoritmos-I/asintotica.png)
+![asintotica](../_src/assets/07-Algoritmos-I/asintotica.png)
 
 Una función f(x) pertenece a O(g(x)) cuando existe una constante positiva c tal que a partir de un valor x0, f(x) no sobrepasa a cg(x). Quiere decir que la función f es inferior a g a partir de un valor dado salvo por un factor constante.
 
-![ChemestryDog](../_src/assets/06-Algoritmos-I/chemestrydog.jpg)
+![ChemestryDog](../_src/assets/07-Algoritmos-I/chemestrydog.jpg)
 
 No se preocupen! es mucho más simple que eso. La notación _O grande_ intenta analizar la complejidad de los algoritmos según crece el número de entradas ( _n_ ) que tiene que analizar, en general es el tamaño del dataset que usa como entrada. Y lo que busca es una función que crezca de una forma con respecto a _n_ ( # de entradas ) tal que nuestro algoritmo nunca crezca más rápido que esa función, aunque si puede crecer más lento. Básicamente, estamos buscando algo para poder decir: mirá este algoritmo nunca va a tardar más que esto, capaz tarda menos, pero más no.
 Esto nos va a servir mucho, porque vamos a poder decidir si un algoritmo es bueno o no en función de la cantidad de datos que vamos a analizar, por ejemplo: si tuvieramos que ordenar dos números, seguramente cualquier algoritmo que usemos lo va terminar en un par de milisegundos, si tenemos que ordenar 10 o 100 tambien... pero si tenemos que ordernar 1.000.000 de números ya cambia la cosa, habrá algoritmos que los ordenen en segundos y otros que pueden llegar a tardar horas! En fin, según el problema vamos a poder decidir que necesitamos.
@@ -237,7 +237,7 @@ Sigamos esta lista de pasos para entender rápidamente cuál es la función supe
 
 Regla tres: Si una función es más grande que la otra podés _'redondear'_ y tomar la función más grande. Miren este caso:
 
-![nnn](../_src/assets/06-Algoritmos-I/nnn.png)
+![nnn](../_src/assets/07-Algoritmos-I/nnn.png)
 
 Fijensé cúan importante es N cuando el tamaño crece (que es justamente el caso que nos interesa).
 
@@ -358,7 +358,7 @@ Es el caso del juego de búsqueda que hicimos! se aplica en problemas donde en c
 
 ##### O ( N! ) El horror, hermano
 
-![cat](../_src/assets/06-Algoritmos-I/cat.jpg)
+![cat](../_src/assets/07-Algoritmos-I/cat.jpg)
 
 N factorial, quiere decir: N *N-1* N-2 *N-3* ... * 1 .
 Por ejemplo: 4! = 4\*3\*2\*1 = 24
@@ -377,19 +377,19 @@ Por ejemplo, si tengo los número 1,2 y 3. Puede haber 3! combinaciones distinta
 
 #### Comparación Gráfica
 
-![Big-o](../_src/assets/06-Algoritmos-I/bigo.png)
+![Big-o](../_src/assets/07-Algoritmos-I/bigo.png)
 
 En la imagen de arriba podemos ver una comparación gráfica de las distintas complejidades de los algoritmos.
 
 Si tuvieramos una compu es capaz de ejecutar 1.000.000 instrucciones por segundo (un poco optimista para las compus de hoy) , veamos cuanto tiempo tardarían algoritmos de distinta complejidad  en terminar de correr con un N de entrada de 1000.
 
-![tablaTiempo](../_src/assets/06-Algoritmos-I/tablatiempo.png)
+![tablaTiempo](../_src/assets/07-Algoritmos-I/tablatiempo.png)
 
 Sorprendente, no? Miren [esto](https://es.wikipedia.org/wiki/Torres_de_Han%C3%B3i#Historia)
 
 Ahora pensemos el problema al reves. ¿Qué cantidad de datos podría procesar cada algoritmo en un segundo?:
 
-![tablaSegundo](../_src/assets/06-Algoritmos-I/tablasegundo.png)
+![tablaSegundo](../_src/assets/07-Algoritmos-I/tablasegundo.png)
 
 Al primero podemos tirarle la cantidad de datos que quisieramos! (de hecho tendriamos un problema de memoria, más que de tiempo).
 A los últimos los vamos a poder usar sólamente con entradas que sean muy pequeñas... si no, vamos a tener que esperar mucho tiempo...
@@ -427,7 +427,7 @@ Veamos algunos algoritmos:
 
 Este es tal vez uno de los más simples, y consiste básicamente en extraer el elemento del conjunto y agregarlo en la posición que le corresponde según el ordenamiento que estemos usando. Para hacerlo el algoritmo tiene que ir viendo cada uno de los elementos que ya están y compararlo con el extraido, hasta encontrar la posición que corresponde.
 
-![insertionSort](../_src/assets/06-Algoritmos-I/insertion.gif)
+![insertionSort](../_src/assets/07-Algoritmos-I/insertion.gif)
 
 Siendo así, y analizando el peor caso (sería que cada elemento que saquemos vaya al final de la lista): para el primero necesitariamos N pasos, para el segundo N-1, para el tercero N-2 y así sucesivamente. Esto es una suma triangular, y se puede demostrar que el resultado es `n * (n+1) /2`
 
@@ -440,7 +440,7 @@ Siendo así, y analizando el peor caso (sería que cada elemento que saquemos va
 
 O sea que para el peor caso este algoritmo tiene una complejidad de `O(n²)`. Y en el mejor de los casos, donde ya estaban ordenados los elementos, tiene que recorrer todos los elementos una vez, por lo tanto en el mejor caso tiene complejidad `O(n)`.
 
-![insertionBest](../_src/assets/06-Algoritmos-I/insertionbest.gif)
+![insertionBest](../_src/assets/07-Algoritmos-I/insertionbest.gif)
 
 O sea este algoritmo nos puede servir en el caso que sepamos que los datos pueden venir _casi_ ordenados!
 
@@ -448,7 +448,7 @@ O sea este algoritmo nos puede servir en el caso que sepamos que los datos puede
 
 Selection Sort intenta ordenar por posición, es decir empieza en la posicion mínima y busca el elemento que corresponde a ese lugar. Básicamente, empieza buscando el primer mínimo (si ordenamos en forma creciente ) y lo pone en la primera posición, luego para la segunda posición vuelve a buscar el mínimo pero dentro de los elementos que quedan, así sucesivamente hasta que no quedan elementos por ordenar.
 
-![selectionSort](../_src/assets/06-Algoritmos-I/selection.gif)
+![selectionSort](../_src/assets/07-Algoritmos-I/selection.gif)
 
 O sea que para cada elemento de la lista, tenemos que recorrer n-1 elementos restantes. Por lo tanto, la primera vez vamos a recorrer `n` elementos, la segunda vez `n-1` y así. O sea que estamos en un caso muy parecido al insertionSort; o sea que la complejidad de Selection Sort es también `O( n )`. Este algoritmo es independiente de cómo vengan ordenado los datos, ya que siempre tiene que recorrer los mismos elementos. Lo bueno de este algoritmo, además de ser muy simple y fácil de implementar, es que no necesita mucha memoria para correr.
 
@@ -459,10 +459,10 @@ Este algoritmo es muy simple:
  1. Recorré los elementos: si dos items adyacentes estan desordenados, hacé un swap.
  2. Si terminas un recorrido sin hacer un swap, ya está ordenado.
 
-![BubbleSort](../_src/assets/06-Algoritmos-I/bubblesort.gif)
+![BubbleSort](../_src/assets/07-Algoritmos-I/bubblesort.gif)
 
 Como verán la perfomance cambia drásticamente según el orden original de los datos. De hecho, en el mejor caso, el algoritmo terminá en `O (n)`. Aunque si estuvieran en el orden inverso, va a tener que recorrer el arreglo n veces por cada elemento, llegando así a tener una complejidad `O(N²)`. Es bueno conocerlo, ya que nos puede servir en casos donde los datos no vienen tan desordenados, ya que este algoritmo los ordenará más rápidos que los demás.
 
 ## Homework
 
-Completa la tarea descrita en el archivo [README](https://github.com/soyHenry/FT-M1/blob/master/06-Algoritmos-I/homework/README.md)
+Completa la tarea descrita en el archivo [README](https://github.com/soyHenry/FT-M1/blob/master/07-Algoritmos-I/homework/README.md)
