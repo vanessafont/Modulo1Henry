@@ -19,7 +19,7 @@
 - [Estructura de Datos II](./05-EstructuraDeDatos-II)
 - [Estructura de Datos III](./06-EstructuraDeDatos-III)
 - [Algoritmos I](./07-Algoritmos-I)
-- [Algoritmos II](./07-Algoritmos-II)
+- [Algoritmos II](./08-Algoritmos-II)
 
 </div >
 
