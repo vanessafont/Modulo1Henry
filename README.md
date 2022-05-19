@@ -12,8 +12,8 @@
 
 <div class="hide">
 
-- [Intro to Computer Science](./00-IntroToCS)
-- [Javascript Avanzado I](./01-JavaScriptAvanzado-I)
+- [Intro to Computer Science](./01-IntroToCS)
+- [Javascript Avanzado I](./02-JavaScriptAvanzado-I)
 - [Javascript Avanzado II](./02-JavaScriptAvanzado-II)
 - [Estructura de Datos I](./03-EstructuraDeDatos-I)
 - [Estructura de Datos II](./04-EstructuraDeDatos-II)
@@ -36,8 +36,8 @@ __IMPORTANTE:__ Luego de completar cada una de las homeworks del día deberán e
 ### Extra
 
 - [Patrones de JavaScript](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
-- [Manejo de errores](./01-JavaScriptAvanzado-I/errores.md)
-- [JS orientado a Objetos](./01-JavaScriptAvanzado-I/OOP.md)
+- [Manejo de errores](./02-JavaScriptAvanzado-I/errores.md)
+- [JS orientado a Objetos](./02-JavaScriptAvanzado-I/OOP.md)
 
 ### Links copados
 

@@ -19,7 +19,7 @@
   </tr>
 </table>
 
-# JavaScript 
+# JavaScript
 
 #### Avanzado I
 
@@ -41,7 +41,7 @@ Un programa que lee tu código y determina qué hace y si su sintaxis es válida
 
 ## Lexical Environment
 
-El lexical environment tiene que ver con *dónde* están declarados ciertos statements o expresiones en tu código. Es decir, el comportamiento de JavaScript puede cambiar según dónde hayas escrito el código.
+El lexical environment tiene que ver con _dónde_ están declarados ciertos statements o expresiones en tu código. Es decir, el comportamiento de JavaScript puede cambiar según dónde hayas escrito el código.
 
 ```js
 function hola() {
@@ -57,11 +57,11 @@ Por ejemplo, para el intérprete las dos declaraciones de variable del arriba te
 
 ## Execution Context
 
-El contexto de ejecución contiene información sobre *qué* código se está ejecutando en cada momento. Además de mantener el código que tiene que ejecutar, también mantiene más información sobre desde dónde se invocó ese código, en qué lexical enviroment está, etc...
+El contexto de ejecución contiene información sobre _qué_ código se está ejecutando en cada momento. Además de mantener el código que tiene que ejecutar, también mantiene más información sobre desde dónde se invocó ese código, en qué lexical enviroment está, etc...
 
 ### Global Enviroment
 
-Cada vez que ejecutamos algo en JavaScript **se corre dentro de un contexto de ejecución**. Como todo el código corre en un contexto, si no especificamos ese contexto (veremos cómo se hace despues) entonces el código se va a ejecutar en el __contexto global__, que es el contexto de base que nos crea automáticamente el interprete.
+Cada vez que ejecutamos algo en JavaScript __se corre dentro de un contexto de ejecución__. Como todo el código corre en un contexto, si no especificamos ese contexto (veremos cómo se hace despues) entonces el código se va a ejecutar en el __contexto global__, que es el contexto de base que nos crea automáticamente el interprete.
 
 > Básicamente, vamos a decir que es __global__ cualquier bloque de código que no esté declarado dentro de una función.
 
