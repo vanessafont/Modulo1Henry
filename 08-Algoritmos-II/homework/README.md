@@ -15,7 +15,6 @@
 * Implementa el algoritmo en:
   * Un árbol binario
   * En un arreglo (recuerden como guardar árboles binarios en un arreglo)
-  ![ArbolEnArreglo](../img/ayudin.png)
 
 ### BFS y DFS
 
