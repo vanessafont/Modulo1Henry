@@ -22,11 +22,20 @@ Al finalizar esta homework comprenderás la lógica computacional a través de l
 
 ## 📋 Instrucciones preliminares
 
-1. Para poder ejecutar los test de esta tarea es necesario que nos ubiquemos dentro de la carpeta homework. En la terminal corre los comandos:
-   -  cd + [00-IntroToCS].
+1. Para ubicarte dentro de la carpeta homework escribe en tu terminal los siguientes comandos:
+   -  cd + [01-IntroToCS].
    -  cd + [homework].
-2. Cuando estés allí, instala las dependencias con el comando npm install o npm i.
-3. ¡Listo! Ya puedes correr los test con el comando npm test.
+2. Luego, instalaremos las dependencias con el comando:
+
+```javascript
+npm install
+```
+
+3. Listo! Ya puedes correr los test con el comando:
+
+```javascript
+npm test
+```
 
 ---
 
@@ -58,6 +67,6 @@ DecimalABinario(8); // debe retornar '1000'
 
 ---
 
-## Recuerda que...
+## 🧠 Recuerda que...
 
 Las ciencias de la computación han avanzado a pasos agigantados, pero aún las operaciones más complejas se reducen, dentro de la computadora, a ceros y unos. Es decir: el sistema binario.
