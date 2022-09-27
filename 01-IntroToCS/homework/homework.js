@@ -2,36 +2,36 @@
 
 function BinarioADecimal(num) {
   // tu codigo aca
-  let decim = 0;
-  let chain = [];
-  for (let i = 0; i < num.length; i++) {
-    chain.unshift(num[i]);
-  }
+  let res = 0
+  let array = []
 
-  for (let j = 0; j < chain.length; j++) {
-    decim += Math.pow(2, j) * chain[j];
+  for (let i = 0; i < num.length; i++){
+    array.unshift(num[i])
   }
-
-  return decim;
+  for (let i = 0; i < array.length; i++){
+    res = res + Math.pow(2,i) * array[i]
+  }
+  return res
 }
+
 
 function DecimalABinario(num) {
   // tu codigo aca
-  let bin = [];
-  let textbin = "";
-
-  for (let i = 0; i < 100; i++) {
-    if (num < 1) {
+  let array = []
+  let str = ""
+  for (let i = 0; i < 9999; i++){
+    if (num < 1){
       break;
     }
-    bin.unshift(num % 2);
-    num = Math.floor(num / 2);
-  }
-
-  for (let i = 0; i < bin.length; i++) {
-    textbin += bin[i];
-  }
-  return textbin;
+    let a = num % 2;
+    array.unshift(a);
+    num = Math.floor(num / 2)
+ 
+}
+  for (let i = 0; i < array.length; i++){
+    str = str + array[i]
+}
+return str
 }
 
 module.exports = {
