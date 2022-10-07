@@ -1,59 +1,174 @@
-# JAVASCRIPT AVANZADO I | Homework
 
-## 📒 Temas de la clase
+# Homework JavaScript Avanzado I
 
--  Scope
--  Hoisting.
--  Coerción de datos.
--  Contexto de ejecución y entorno léxico.
--  Event loop.
--  Objeto `this`.
+## Scope & Hoisting
 
----
+Determiná que será impreso en la consola, sin ejecutar el código.
 
-## 👀 Aprendizaje esperado
+> Investiga cuál es la diferencia entre declarar una variable con `var` y directamente asignarle un valor.
 
-Al finalizar esta homework entenderás cómo la computadora interpreta código Javascript. También habrás trabajado con diferentes contextos que pueden surgir dentro del lenguaje. Por último, aprenderás cuál es la conversión automática de un tipo de dato a otro cuando se ejecuta el código.
+```javascript
+x = 1;
+var a = 5;
+var b = 10;
+var c = function(a, b, c) {//8,9,10
+  var x = 10;
+  console.log(x);//10
+  console.log(a);//8
+  var f = function(a, b, c) { //8,9,10
+    b = a;//8
+    console.log(b);//8
+    b = c;//10
+    var x = 5;
+  }
+  f(a,b,c);//8,10,10
+  console.log(b);//10
+}
+c(8,9,10);
+console.log(b);//10
+console.log(x);//1
+```
 
----
+```javascript
+console.log(bar);//undifined?
+console.log(baz);//undefined?
+foo();//Undefined aun jaja
+function foo() { console.log('Hola!'); }//ya pa que? ya llamaron a la funcion pero no estaba declarada :(
+var bar = 1;//yapaquex2
+baz = 2;//yapaquex3, si esto fuera un bucle al menos serviria
+```
 
-## ⏱ Duración estimada
+```javascript
+var instructor = "Tony";
+if(true) {
+    var instructor = "Franco";
+}
+console.log(instructor);//Franco
+```
 
-> 90 minutos
+```javascript
+var instructor = "Tony";
+console.log(instructor);//Tony
+(function() {
+   if(true) {
+      var instructor = "Franco";
+      console.log(instructor);//Franco
+   }
+})();
+console.log(instructor);//Tony porque la variable instructor vuelve a valer lo que valia antes de la funcion anterior
+```
 
----
+```javascript
+var instructor = "Tony";
+let pm = "Franco";
+if (true) {
+    var instructor = "The Flash";
+    let pm = "Reverse Flash";
+    console.log(instructor); //the flash
+    console.log(pm);  //reverse flash
+}
+console.log(instructor); // the flash
+console.log(pm); //franco
+```
+### Coerción de Datos
 
-## 📋 Instrucciones preliminares
+¿Cuál crees que será el resultado de la ejecución de estas operaciones?:
 
-Este homework no tiene tests. Sólo consiste en leer código y anticipar la respuesta que dará antes de ejecutarlo.
+```javascript
+6 / "3"//2
+"2" * "3"//"6"
+4 + 5 + "px"//"9px"
+"$" + 4 + 5//"$45"
+"4" - 2//"2"
+"4px" - 2 //NaN
+7 / 0//jajjaja yo jodo
+     // a medio mundo con esta pregunta
+     //obvio da error, pero su respuesta
+     // tiende a ser infinita
+{}[0]//[0]
+parseInt("09")//9
+5 && 2//2
+2 && 5//5
+5 || 0//5
+0 || 5//5
+[3]+[3]-[10]//33-10 = 23
+3>2>1// 3>2 = True  ; True>1 = False ; False
+[] == ![] // ![] = False ; "" = False ; False = False; True
+```
 
----
+> Si te quedó alguna duda repasá con [este artículo](http://javascript.info/tutorial/object-conversion).
 
-## 👩‍💻 **CONSIGNA**
 
-Hoy no te hará falta escribir código, ¡sino leerlo! Tu objetivo es: entender **cómo** funciona el ejercicio que ves escrito y también comprender **por qué** funciona de esa manera. Para esta práctica es imprescindible que actives tu capacidad **_lógico && reflexiva_**.
+### Hoisting
 
-En este homework encontrarás 5 ejercicios. Tomando en cuenta lo visto en la clase de hoy…
+¿Cuál es el output o salida en consola luego de ejecutar este código? Explicar por qué:
 
-</br >
+```javascript
+function test() {
+   console.log(a);//undefined
+   console.log(foo());//2
+   //Las variables y funciones son declaradas, pero no se les asigna valor aun, la funcion tiene el return 2, por eso retorna 2
+   var a = 1;
+   function foo() {
+      return 2;
+   }
+}
 
-🟡 1. Lee detenidamente cada uno de los siguientes ejercicios. Analiza cuáles son los scopes que contiene y con qué tipo de datos te encuentras.
+test();
+```
 
-</br >
+Y el de este código? :
 
-🟡 2. Deja comentado debajo o al lado de cada ejercicio cuál crees que será la respuesta que dará el código si lo ejecutas. Tienes que anticiparlo, así que ¡sin trampas!
+```javascript
+var snack = 'Meow Mix';
 
-</br >
+function getFood(food) {
+    if (food) {
+        var snack = 'Friskies';
+        return snack;
+    }
+    return snack;
+}
 
-🟡 3. Una vez que tienes escrita tu respuesta, ejecuta el ejercicio en tu terminal con Node.js.
+getFood(false);
+//undefined en todo, no entra al IF, y Snack no ha sido declarado dentro de la funcion
+```
 
-</br >
 
-🟡 4. Finalmente, compara el código que anticipaste con el que devolvió tu terminal. ¿Fue la misma respuesta? ¿Resultó algo inesperado? ¿Puedes identificar por qué? Estas preguntas te ayudarán a mejorar la comprensión de cada ejercicio.
+### This
 
----
+¿Cuál es el output o salida en consola luego de ejecutar esté código? Explicar por qué:
 
-## 🧠 Recuerda que...
+```javascript
+var fullname = 'Juan Perez';
+var obj = {
+   fullname: 'Natalia Nerea',
+   prop: {
+      fullname: 'Aurelio De Rosa',
+      getFullname: function() {
+         return this.fullname;
+      }
+   }
+};
 
--  El orden en el que se ejecutan las operaciones en una misma línea está determinado por la precedencia y la asociatividad.
--  Una variable puede estar o no en un determinado contexto de ejecución, dependiendo de la manera y el lugar en el que fue declarada.
+console.log(obj.prop.getFullname());//aurelio de rosa
+
+var test = obj.prop.getFullname;
+
+console.log(test());//undefined o juan perez
+```
+
+### Event loop
+
+Considerando el siguiente código, ¿Cuál sería el orden en el que se muestra por consola? ¿Por qué?
+
+```javascript
+function printing() {
+   console.log(1);
+   setTimeout(function() { console.log(2); }, 1000);
+   setTimeout(function() { console.log(3); }, 0);
+   console.log(4);
+}
+//1432
+printing();
+```
