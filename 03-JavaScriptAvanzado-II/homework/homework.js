@@ -49,7 +49,8 @@ var alumno = {
    curso: 'FullStack',
 };
 
-function getNombre() {}
+function getNombre() {
+  return this.nombre;}
 
 /*
   Ejercicio 3
@@ -65,7 +66,9 @@ let getNombreAlumno = getNombre.bind();
   Sin modificar la función crearCadena, usar bind para guardar, en las tres variables declaradas a continuación, tres funciones que retornen una cadena (string) y el delimitador especificado (asteriscos, guiones, y guiones bajos, respectivamente). Las funciones obtenidas deberían recibir solamente un argumento - la cadena de texto - ya que los otros argumentos habrán sido "bindeados". 
 */
 
-function crearCadena(delimitadorIzquierda, delimitadorDerecha, cadena) {}
+function crearCadena(delimitadorIzquierda, delimitadorDerecha, cadena) {
+    return delimitadorIzquierda + cadena + delimitadorDerecha;
+}
 
 let textoAsteriscos = crearCadena.bind();
 let textoGuiones = crearCadena.bind();
